@@ -21,9 +21,8 @@ updates:
     cooldown:
       default-days: 5
     schedule:
-      interval: weekly
-      day: monday
-      time: '00:00'
+      interval: daily
+      time: '08:14'
       timezone: UTC
     allow:
       - dependency-type: direct
@@ -66,13 +65,5 @@ updates:
         update-types:
           - version-update:semver-patch
 
-  - <<: *npm-release-branch
-    target-branch: release-4.22
-  - <<: *npm-release-branch
-    target-branch: release-4.21
-  - <<: *npm-release-branch
-    target-branch: release-4.20
-  - <<: *npm-release-branch
-    target-branch: release-4.19
   - <<: *npm-release-branch
     target-branch: release-4.18
