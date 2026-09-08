@@ -21,10 +21,10 @@ updates:
       default-days: 5
     schedule:
       interval: daily
-      time: '09:20'
+      time: '09:47'
       timezone: UTC
     allow:
-      - dependency-type: direct
+      - dependency-type: all
         update-types:
           - version-update:semver-minor
           - version-update:semver-patch
@@ -61,19 +61,20 @@ updates:
     target-branch: release-4.23
     directory: /
     commit-message:
-      prefix: '[4.23] '
+      prefix: 'chores(4.23)'
     cooldown:
       default-days: 5
     schedule:
       interval: daily
-      time: '09:20'
+      time: '09:47'
       timezone: UTC
     ignore:
-      - dependency-name: '@openshift/*'
+      - dependency-name: '@openshift/dynamic-plugin-sdk'
       - dependency-name: '@openshift-console/*'
     allow:
-      - dependency-type: direct
+      - dependency-type: all
         update-types:
+          - version-update:semver-minor
           - version-update:semver-patch
     groups:
       npm:
@@ -84,22 +85,22 @@ updates:
     target-branch: release-4.18
     directory: /
     commit-message:
-      prefix: '[4.18] '
+      prefix: 'chores(4.18)'
     cooldown:
       default-days: 5
     schedule:
       interval: daily
-      time: '09:20'
+      time: '09:47'
       timezone: UTC
     ignore:
-      - dependency-name: '@openshift/*'
+      - dependency-name: '@openshift/dynamic-plugin-sdk'
       - dependency-name: '@openshift-console/*'
     allow:
-      - dependency-type: direct
+      - dependency-type: all
         update-types:
+          - version-update:semver-minor
           - version-update:semver-patch
     groups:
       npm:
-        applies-to: version-updates
         patterns:
           - '*'
