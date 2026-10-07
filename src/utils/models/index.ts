@@ -1,5 +1,5 @@
 export * from './network-policy';
-import { modelToGroupVersionKind, modelToRef } from '@kubevirt-ui/kubevirt-api/console';
+import { modelToGroupVersionKind, modelToRef } from '@kubevirt-ui-ext/kubevirt-api/console';
 import { K8sModel } from '@openshift-console/dynamic-plugin-sdk';
 
 export const QuickStartModel: K8sModel = {
@@ -100,3 +100,14 @@ export const ClusterUserDefinedNetworkModelGroupVersionKind = modelToGroupVersio
   ClusterUserDefinedNetworkModel,
 );
 export const ClusterUserDefinedNetworkModelRef = modelToRef(ClusterUserDefinedNetworkModel);
+
+export const IngressModel: K8sModel = {
+  abbr: 'I',
+  apiGroup: 'networking.k8s.io',
+  apiVersion: 'v1',
+  kind: 'Ingress',
+  label: 'Ingress',
+  labelPlural: 'Ingresses',
+  namespaced: true,
+  plural: 'ingresses',
+};
